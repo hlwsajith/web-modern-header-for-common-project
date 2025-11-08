@@ -51,3 +51,65 @@ a {
 .header-logo img {
   width: 80px;
 }
+/* ==================Toggle Menu=========================== */
+/* toggle button design  */
+.bars-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.bars-container .bar-1,
+.bar-2,
+.bar-3 {
+  background-color: white;
+  width: 40px;
+  height: 5px;
+  border-radius: 12px;
+  transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width,
+    0.3s ease right;
+}
+
+.openmenu .bar-1 {
+  width: 0;
+  transform-origin: 0;
+}
+
+.openmenu .bar-3 {
+  transform: rotate(-45deg) translate(7.5px, -7.5px);
+  transform-origin: 60px;
+}
+
+.openmenu .bar-2 {
+  transform: rotate(45deg) translate(7.5px, 7.5px);
+}
+/* =====================End Toggle Menu======================== */
+/* mobile responsive Style  */
+
+@media (max-width: 768px) {
+  .nav-content {
+    background-color: rgb(0 18 34);
+    width: 60%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+
+  .header-container {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .nav-content ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 35px;
+    padding-left: 20px;
+  }
+  .login-button {
+    display: none;
+  }
+}
