@@ -19,6 +19,13 @@
         <a href=""><img src="header-logo.png" alt="logo" /></a>
       </div>
 
+      <!-- bar container toggle button  -->
+      <div class="bars-container" id="bars">
+        <div class="bar-1"></div>
+        <div class="bar-2"></div>
+        <div class="bar-3"></div>
+      </div>
+
       <!-- nav content  -->
       <div class="nav-content">
         <nav>
@@ -38,5 +45,12 @@
       </div>
     </div>
     <!-- End Header Container  -->
+    <script>
+      var bars = document.getElementById("bars");
+
+      bars.onclick = function () {
+        bars.classList.toggle("openmenu");
+      };
+    </script>
   </body>
 </html>
