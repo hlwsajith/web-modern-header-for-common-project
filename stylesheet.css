@@ -17,6 +17,7 @@ ul {
   padding: 0;
   font-family: "Poppins", sans-serif;
   font-weight: 500;
+  position: fixed;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -51,50 +52,27 @@ a {
 .header-logo img {
   width: 80px;
 }
-/* ==================Toggle Menu=========================== */
-/* toggle button design  */
-.bars-container {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 5px;
+.login-button {
+  background-color: rgb(0 157 149 / 99%);
+  padding: 10px 18px 10px 18px;
+  border-radius: 10px;
 }
-
-.bars-container .bar-1,
-.bar-2,
-.bar-3 {
-  background-color: white;
-  width: 40px;
-  height: 5px;
-  border-radius: 12px;
-  transition: 0.3s ease transform, 0.3s ease top, 0.3s ease width,
-    0.3s ease right;
-}
-
-.openmenu .bar-1 {
-  width: 0;
-  transform-origin: 0;
-}
-
-.openmenu .bar-3 {
-  transform: rotate(-45deg) translate(7.5px, -7.5px);
-  transform-origin: 60px;
-}
-
-.openmenu .bar-2 {
-  transform: rotate(45deg) translate(7.5px, 7.5px);
-}
-/* =====================End Toggle Menu======================== */
-/* mobile responsive Style  */
 
 @media (max-width: 768px) {
   .nav-content {
     background-color: rgb(0 18 34);
     width: 60%;
+    position: fixed;
+    top: 80px;
     height: 100vh;
     display: flex;
     align-items: center;
+    justify-content: center;
+    transform: translateX(70%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 5;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+    opacity: 0.95;
   }
 
   .header-container {
@@ -105,11 +83,45 @@ a {
   .nav-content ul {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 35px;
     padding-left: 20px;
   }
   .login-button {
     display: none;
   }
+  /* ==================Toggle Menu=========================== */
+  /* toggle button design  */
+  .bars-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 5px;
+    cursor: pointer;
+  }
+
+  .bars-container .bar-1,
+  .bar-2,
+  .bar-3 {
+    background-color: white;
+    width: 30px;
+    height: 5px;
+    border-radius: 12px;
+    transition: 0.3s ease-in-out;
+  }
+
+  .bars-container.open .bar-1 {
+    transform: translateY(10px) rotate(45deg);
+  }
+
+  .bars-container.open .bar-2 {
+    opacity: 0;
+  }
+
+  .bars-container.open .bar-3 {
+    transform: translateY(-10px) rotate(-45deg);
+  }
+  /* =====================End Toggle Menu======================== */
+  /* mobile responsive Style  */
 }
