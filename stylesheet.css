@@ -66,9 +66,9 @@ a {
 }
 
 @media (max-width: 768px) {
-  .nav-content {
+  /* .nav-content .nav-content {
     font-size: 14px;
-  }
+  } */
 
   .header-logo img {
     width: 60px;
@@ -123,8 +123,8 @@ a {
   .bar-2,
   .bar-3 {
     background-color: white;
-    width: 25px;
-    height: 4px;
+    width: 27px;
+    height: 5px;
     border-radius: 12px;
     transition: 0.3s ease-in-out;
   }
