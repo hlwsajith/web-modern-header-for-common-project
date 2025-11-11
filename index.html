@@ -27,7 +27,7 @@
       </div>
 
       <!-- nav content  -->
-      <div class="nav-content">
+      <div class="nav-content" id="nav-list">
         <nav>
           <ul>
             <li><a href="#"> Home</a></li>
@@ -47,9 +47,14 @@
     <!-- End Header Container  -->
     <script>
       var toggleIcon = document.getElementById("nav-toggle");
+      var navShow = document.getElementById("nav-list");
 
       toggleIcon.addEventListener("click", function (e) {
         toggleIcon.classList.toggle("open");
+      });
+
+      toggleIcon.addEventListener("click", function (e) {
+        navShow.classList.toggle("showmenu");
       });
     </script>
   </body>
