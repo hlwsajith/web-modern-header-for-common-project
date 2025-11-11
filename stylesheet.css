@@ -67,6 +67,13 @@ a {
 
 @media (max-width: 768px) {
   .nav-content {
+    font-size: 14px;
+  }
+
+  .header-logo img {
+    width: 60px;
+  }
+  .nav-content {
     background-color: rgb(0 18 34);
     width: 60%;
     position: fixed;
@@ -116,8 +123,8 @@ a {
   .bar-2,
   .bar-3 {
     background-color: white;
-    width: 30px;
-    height: 5px;
+    width: 25px;
+    height: 4px;
     border-radius: 12px;
     transition: 0.3s ease-in-out;
   }
