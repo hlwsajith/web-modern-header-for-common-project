@@ -63,7 +63,7 @@ a {
     background-color: rgb(0 18 34);
     width: 60%;
     position: fixed;
-    top: 80px;
+    top: 0%;
     height: 100vh;
     display: flex;
     align-items: center;
@@ -72,10 +72,12 @@ a {
     transition: transform 0.5s ease-in-out;
     z-index: 5;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
-    opacity: 0.95;
+    margin-left: 100%;
+    transition: all 0.5s ease;
   }
 
   .header-container {
+    width: 100%;
     display: flex;
     justify-content: space-between;
   }
@@ -99,6 +101,8 @@ a {
     justify-content: space-between;
     gap: 5px;
     cursor: pointer;
+    z-index: 6;
+    right: 10px;
   }
 
   .bars-container .bar-1,
@@ -124,4 +128,21 @@ a {
   }
   /* =====================End Toggle Menu======================== */
   /* mobile responsive Style  */
+
+  /* mobile menu display when toggle  */
+  .showmenu.nav-content {
+    background-color: rgb(29, 29, 29);
+    width: 60%;
+    position: fixed;
+    top: 0%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateX(70%);
+    transition: transform 0.5s ease-in-out;
+    z-index: 5;
+    margin-left: 0%;
+    transition: all 0.5s ease;
+  }
 }
