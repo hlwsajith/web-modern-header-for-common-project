@@ -3,7 +3,7 @@
   padding: 0;
 }
 body {
-  background: url("./Majestic Mountain Landscape at Twilight.png") no-repeat;
+  background: url(.//pexels-cottonbro-7780078.jpg) no-repeat;
   background-size: cover;
   color: white !important;
 }
@@ -56,6 +56,13 @@ a {
   background-color: rgb(0 157 149 / 99%);
   padding: 10px 18px 10px 18px;
   border-radius: 10px;
+  transition: all 0.5s ease;
+  letter-spacing: 1.5px;
+}
+
+.login-button:hover {
+  background-color: rgba(29, 29, 29, 0.99);
+  border: 1px solid whitesmoke;
 }
 
 @media (max-width: 768px) {
